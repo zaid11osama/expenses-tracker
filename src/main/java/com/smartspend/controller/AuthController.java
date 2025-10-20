@@ -7,4 +7,5 @@ public class AuthController {
     long z =3;
     long w =4;
     long h =5;
+    long g =6;
 }
