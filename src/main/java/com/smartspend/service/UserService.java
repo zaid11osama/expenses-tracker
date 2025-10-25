@@ -36,11 +36,20 @@ public class UserService {
         return userRepository.findAll();
     }
     public User getUserById(int id) {
-        return userRepository.findById(id).get();
+       User user = userRepository.findById(id).orElse(null);
+       return user;
     }
 
     public void deleteUserById(int id) {
-        userRepository.deleteById(id);
+        userRepository.deleteById( id);
+    }
+
+    public User getUserByUserName(String username) {
+       return userRepository.findByUserName(username).orElseThrow(()->new RuntimeException("User Not Found"));
+    }
+
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(email).orElseThrow(()->new RuntimeException("User Not Found"));
     }
 
 
