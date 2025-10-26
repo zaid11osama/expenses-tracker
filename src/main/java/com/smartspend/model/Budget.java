@@ -1,6 +1,7 @@
 package com.smartspend.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,6 +24,7 @@ public class Budget {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID",nullable = false)
+    @JsonIgnore
     private User user;
 
     @Column(name = "MONTH", nullable = false, length = 20)

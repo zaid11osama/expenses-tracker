@@ -1,4 +1,4 @@
-package com.smartspend.service;
+package com.smartspend.service.modelservice;
 
 
 import com.smartspend.model.User;
@@ -24,6 +24,7 @@ public class UserService {
     private UserRepository userRepository;
     @Autowired
     private PasswordEncoder passwordEncoder;
+
 
 
     public User createUser(User user) {

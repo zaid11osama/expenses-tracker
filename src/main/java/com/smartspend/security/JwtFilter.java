@@ -1,7 +1,5 @@
 package com.smartspend.security;
 
-import com.smartspend.model.User;
-import com.smartspend.service.UserService;
 import com.smartspend.utility.JwtUtil;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
